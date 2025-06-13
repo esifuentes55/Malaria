@@ -27,7 +27,7 @@
         <img class="d-block mx-auto mb-2" src="LogotipoV2-Simple.png" alt="" width="80" height="80">
         <h1 class="display-5 fw-bold">Detector de Malaria</h1>
         <div class="col-lg-6 mx-auto">
-          <p class="lead mb-0">Clasificaci&oacute;n de Malaria  (infectado o no infectado) usando la c&aacute;mara web con Tensorflow.js</p>
+          <p class="lead mb-0">Clasificaci&oacute;n de Malaria (infectado o no infectado) usando la c&aacute;mara web con Tensorflow.js</p>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
       </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.15.0/dist/tf.min.js"></script>
     <script>
       let tamano = 400;
       let video = document.createElement("video");
@@ -55,7 +55,7 @@
       (async () => {
         try {
           console.log("Cargando modelo...");
-          modelo = await tf.loadLayersModel("model.json");
+          modelo = await tf.loadLayersModel("./model-v2.json");
 
           console.log("Modelo cargado");
           mostrarCamara();
