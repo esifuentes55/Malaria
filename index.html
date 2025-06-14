@@ -55,7 +55,7 @@
       (async () => {
         try {
           console.log("Cargando modelo...");
-          modelo = await tf.loadLayersModel("./model-v2.json");
+          modelo = await tf.loadLayersModel("model.json");
 
           console.log("Modelo cargado");
           mostrarCamara();
